@@ -19,11 +19,12 @@ client.on('message', msg => {
     msg.reply('Pong!');
   }
   if (msg.content.startsWith('!addsong ') && msg.content.includes('https://beatsaver.com/beatmap/')){
-      var songCode = msg.content.replace('!add https://beatsaver.com/beatmap/', '');
+      var songCode = msg.content.replace('!addsong https://beatsaver.com/beatmap/', '');
       downloadSong('beatsaver://' + songCode);
         return msg.reply('I have downloaded the song with code ' + songCode);
 
   }
+  
 
 
 });
